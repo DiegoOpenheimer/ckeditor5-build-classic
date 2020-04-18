@@ -70,6 +70,25 @@ ClassicEditor.builtinPlugins = [
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
+	toolbar: {
+		items: [
+			'heading',
+			'|',
+			'bold',
+			'italic',
+			'link',
+			'bulletedList',
+			'numberedList',
+			'|',
+			'indent',
+			'outdent',
+			'|',
+			'blockQuote',
+			'insertTable',
+			'undo',
+			'redo'
+		]
+	},
 	table: {
 		contentToolbar: [
 			'tableColumn',
