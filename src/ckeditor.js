@@ -19,7 +19,8 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
-
+import BlockToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/block/blocktoolbar';
+import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor';
 import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
@@ -34,6 +35,9 @@ import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperti
 import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough.js';
+import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
+import PageBreak from '@ckeditor/ckeditor5-page-break/src/pagebreak';
+import SpecialCharactersEssentials from '@ckeditor/ckeditor5-special-characters/src/specialcharactersessentials';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -65,7 +69,15 @@ ClassicEditor.builtinPlugins = [
 	Underline,
 	Strikethrough,
 	Essentials,
-	Paragraph
+	Paragraph,
+	BlockToolbar,
+	CodeBlock,
+	HorizontalLine,
+	PageBreak,
+	SpecialCharacters,
+	SpecialCharactersEssentials,
+	TableCellProperties,
+	TableProperties
 ];
 
 // Editor configuration.
@@ -74,9 +86,13 @@ ClassicEditor.defaultConfig = {
 		items: [
 			'heading',
 			'|',
+			'alignment',
+			'fontFamily',
 			'bold',
 			'italic',
 			'link',
+			'highlight',
+			'removeFormat',
 			'bulletedList',
 			'numberedList',
 			'|',
@@ -84,16 +100,34 @@ ClassicEditor.defaultConfig = {
 			'outdent',
 			'|',
 			'blockQuote',
+			'specialCharacters',
 			'insertTable',
+			'codeBlock',
+			'horizontalLine',
+			'pageBreak',
 			'undo',
 			'redo'
 		]
 	},
+	blockToolbar: [
+		'heading',
+		'|',
+		'bulletedList', 'numberedList',
+		'|',
+		'bold',
+		'italic',
+		'link',
+		'highlight',
+		'alignment',
+		'indent',
+		'outdent',
+		'|',
+		'blockQuote'
+	],
 	table: {
 		contentToolbar: [
-			'tableColumn',
-			'tableRow',
-			'mergeTableCells'
+			'tableColumn', 'tableRow', 'mergeTableCells',
+			'tableProperties', 'tableCellProperties'
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
