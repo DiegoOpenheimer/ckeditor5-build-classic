@@ -88,6 +88,9 @@ ClassicEditor.defaultConfig = {
 			'|',
 			'alignment',
 			'fontFamily',
+			'fontSize',
+			'fontColor',
+			'fontBackgroundColor',
 			'bold',
 			'italic',
 			'link',
@@ -116,13 +119,12 @@ ClassicEditor.defaultConfig = {
 		'|',
 		'bold',
 		'italic',
+		'fontFamily',
+		'fontSize',
+		'fontColor',
+		'fontBackgroundColor',
 		'link',
-		'highlight',
-		'alignment',
-		'indent',
-		'outdent',
-		'|',
-		'blockQuote'
+		'alignment'
 	],
 	table: {
 		contentToolbar: [
