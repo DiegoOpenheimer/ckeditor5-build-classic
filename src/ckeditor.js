@@ -20,7 +20,6 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import BlockToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/block/blocktoolbar';
-import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor';
 import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
@@ -71,7 +70,6 @@ ClassicEditor.builtinPlugins = [
 	Essentials,
 	Paragraph,
 	BlockToolbar,
-	CodeBlock,
 	HorizontalLine,
 	PageBreak,
 	SpecialCharacters,
@@ -102,7 +100,6 @@ ClassicEditor.defaultConfig = {
 			'blockQuote',
 			'specialCharacters',
 			'insertTable',
-			'codeBlock',
 			'horizontalLine',
 			'pageBreak',
 			'undo',
